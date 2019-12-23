@@ -3,6 +3,7 @@ const Member = require('../model/Member')
 
 router.get('/', async (req, res) => {
     //Is the Query Present? If so retrieve members matching squad query
+    //Test comment
     if (req.query.squad && req.query.squad !== "all") {
         try {
             let squad_name = req.query.squad
