@@ -4,6 +4,8 @@ const dotenv = require('dotenv')
 const Squad = require('./model/Squad')
 const Training = require('./model/Training')
 const Member = require('./model/Member')
+const cors = require('cors')
+const axios = require('axios')
 
 
 
@@ -18,6 +20,10 @@ mongoose.connect(
 
 
 app.use(express.json())
+
+app.use(cors())
+
+
 //Router Routes
 const trainingRouter = require('./routes/training_router')
 const memberRouter = require('./routes/member_router')
