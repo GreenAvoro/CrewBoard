@@ -243,18 +243,20 @@
 
 
 .create-training-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background: rgba(0,0,0,0.3);
 }
 .create-training-box {
     background: white;
     width: 50%;
+    height: 100%;
     margin: 2em auto 6em auto;
-    padding: 1em;
+    padding: 1em 1em 10em 1em;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    overflow: auto;
     
 
 }
@@ -460,9 +462,24 @@
     align-items: center;
     justify-content: center;
 }
+.menu-button {
+    display: none;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .menu-button {
+        display: flex;
+        background: white;
+        border-bottom: 2px solid #ccc;
+        align-items: center;
+        justify-content: center;
+        height: 3em;
+    }
+    .menu-collapse {
+        display: none;
+    }
+    
 
     .calendar-wrapper {
         height: 100%;
