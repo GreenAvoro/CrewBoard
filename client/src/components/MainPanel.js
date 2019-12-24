@@ -12,6 +12,7 @@ function MainPanel(props) {
     const [infoPanelDisplay, updateInfoPanelDisplay] = useState(false)
     const [AddMemberDropDown, updateAddMemberDropDown] = useState(false)
     const [FindMemberDropDown, updateFindMemberDropDown] = useState(false)
+    
 
     const trainingList = props.trainings.map((training, i) => {
         return (
@@ -52,6 +53,11 @@ function MainPanel(props) {
     trainingList.sort((a, b) => new Date(a.props.date) - new Date(b.props.date))
 
     if (props.currentPanel == "trainings") {
+        if(props.trainingsLoading){
+            return(
+                <div className="loading">LOADING</div>
+            )
+        }
         return (
             <div className="main-panel">
                 <div className="dates-list-container">

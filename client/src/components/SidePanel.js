@@ -12,7 +12,10 @@ function SidePanel(props){
     const squad_names = props.squads.map((squad,i) =>{
         return <p 
                     key={i} 
-                    onClick={() => props.updateSquad(squad)}
+                    onClick={() => {
+                        props.updateSquad(squad)
+                        props.panelUpdate("trainings")
+                    }}
                     className={props.currentSquad === squad ? "list-active": ""}
                 >
                     {squad}

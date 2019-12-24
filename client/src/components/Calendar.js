@@ -12,6 +12,7 @@ function Calendar(props) {
     const [trainings, updateTrainings] = useState([])
     const [currentTraining, updateCurrentTraining] = useState({})
     const [currentPanel, updateCurrentPanel] = useState("trainings")
+    const [ trainingsLoading, updateTrainingsLoading] = useState(true)
 
 
     useEffect(() => {
@@ -26,15 +27,18 @@ function Calendar(props) {
             .then(res => res.json())
             .then(data => {
                 updateTrainings(data)
+                updateTrainingsLoading(false)
             })
     }, [createTraining])
 
     //Update when currentSquad changes
     useEffect(() => {
+        updateTrainingsLoading(true)
         fetch(`/api/training/?squad=${currentSquad}`)
             .then(res => res.json())
             .then(data => {
                 updateTrainings(data)
+                updateTrainingsLoading(false)
             })
             updateCurrentTraining({})
     }, [currentSquad])
@@ -66,6 +70,7 @@ function Calendar(props) {
                 currentTraining={currentTraining}
                 currentPanel={currentPanel}
                 squads={squads}
+                trainingsLoading={trainingsLoading}
             />
             {createTraining ? <CreateTraining 
                                     display={updateCreateTraining} 
