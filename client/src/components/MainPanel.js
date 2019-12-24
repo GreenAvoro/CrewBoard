@@ -4,6 +4,7 @@ import compareWeek from '../scripts/findWeek'
 import Crews from './Crews'
 import AddMemeber from './AddMember'
 import FindMemeber from './FindMember'
+import loadingImg from '../images/loading.svg'
 
 import DateItem from './DateItem'
 
@@ -55,7 +56,7 @@ function MainPanel(props) {
     if (props.currentPanel == "trainings") {
         if(props.trainingsLoading){
             return(
-                <div className="loading">LOADING</div>
+                <div className="loading"><img src={loadingImg}></img></div>
             )
         }
         return (
