@@ -567,6 +567,12 @@
     .edit-member-panel {
         width: 90%;
     }
+    .members-search {
+        width: 100%;
+    }
+    .form-element input {
+        width: 100%;
+    }
 
 
 }
