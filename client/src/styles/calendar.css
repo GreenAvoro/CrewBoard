@@ -451,7 +451,7 @@
     margin: 0;
 }
 
-/* Don't know */
+/* Iphone X */
 @media only screen 
     and (device-width : 375px) 
     and (device-height : 812px) 
@@ -476,57 +476,7 @@
     .info-panel-container {
         display: none;
         position: fixed;
-        top: 10vh;
-        background: rgba(0,0,0,.5);
-    }
-    .info-panel-container-head > h1:first-child {
-        color: white;
-    }
-    .info-panel-container.display {
-        display: block;
-    }
-    .info-panel-container-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .close-button.hide-desktop {
-        display: block;
-        color: white;
-        border: 1px solid white;
-        background: rgba(0,0,0,.3);
-        
-    }
-
-    .create-training-box {
-        width: 90%
-    }
-
-}
-
-/* Iphone 8 */
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 667px) 
-    and (-webkit-device-pixel-ratio : 2) { 
-    .calendar-wrapper {
-        height: 100%;
-        grid-template-columns: 100%;
-    }
-    .side-panel {
-        height: auto;
         width: 100%;
-        position: static;
-    }
-
-    .main-panel {
-        display: grid;
-        grid-template-columns: 100%;
-        padding: 0 0;
-    }
-    .info-panel-container {
-        display: none;
-        position: fixed;
         top: 10vh;
         background: rgba(0,0,0,.5);
     }
@@ -555,6 +505,67 @@
 
     .settings-panel-container {
         padding: 1em;
+    }
+
+
+}
+
+/* Iphone 8 */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { 
+    .calendar-wrapper {
+        height: 100%;
+        grid-template-columns: 100%;
+    }
+    .side-panel {
+        height: auto;
+        width: 100%;
+        position: static;
+    }
+
+    .main-panel {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 0 0;
+    }
+    .info-panel-container {
+        display: none;
+        position: fixed;
+        width: 100%;
+        top: 10vh;
+        background: rgba(0,0,0,.5);
+    }
+    .info-panel-container-head > h1:first-child {
+        color: white;
+    }
+    .info-panel-container.display {
+        display: block;
+    }
+    .info-panel-container-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .close-button.hide-desktop {
+        display: block;
+        color: white;
+        border: 1px solid white;
+        background: rgba(0,0,0,.3);
+        
+    }
+
+    .create-training-box {
+        width: 90%
+    }
+
+    .settings-panel-container {
+        padding: 1em;
+    }
+
+    .edit-member-panel {
+        width: 90%;
     }
 
 
