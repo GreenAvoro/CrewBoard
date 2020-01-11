@@ -61,7 +61,7 @@
 .rounded-top {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .dates-list-container {
