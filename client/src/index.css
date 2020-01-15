@@ -18,26 +18,33 @@ code {
 
 header {
   position: fixed;
-  background: #004B6E;
+  background: rgba(0,0,0,0.32);
   color: white;
-  height: 10vh;
+  height: 7.5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 4px solid #879cd3;
   padding: 0 1em;
   width: 100%;
-  box-shadow: 0px 2px 3px rgba(0,0,0,.3);
   z-index: 100;
 }
 .header-spacer {
-  height: 10vh;
+  height: 7.5vh;
+}
+.header-left {
+
 }
 header img {
   height: 80%;
   width: auto;
+  position: absolute;
+  left: 45%;
   cursor: pointer;
+  opacity: 0.8;
 
+}
+header img:hover {
+  opacity: 1;
 }
 .content-wrapper {
 

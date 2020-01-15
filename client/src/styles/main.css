@@ -1,0 +1,7 @@
+.content-container {
+    height: 100vh;
+    width: 100%;
+    background: #fafafa;
+    background-image: url("https://experience.sap.com/wp-content/uploads/2014/10/273835_l_srgb_s_gl.jpg");
+    background-size: 100% auto;  
+}

@@ -8,10 +8,15 @@ function Header(props){
     }
     return(
         <header>
-            <img onClick={handleClick} src={LogoImg} alt="CrewBoard"></img>
-            <nav>
-                <p>Some link</p>
-            </nav>
+            <div class="header-left">
+                <a href="" >Home</a>
+                <a href="">Search</a>
+            </div>
+            <img src={LogoImg}></img>
+            <div class="header-right">
+                
+                <a href="">Options</a>
+            </div>
         </header>
     )
 }
